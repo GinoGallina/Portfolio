@@ -9,7 +9,5 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import 'hamburgers/dist/hamburgers.min.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <>
         <App />
-    </>
 )
