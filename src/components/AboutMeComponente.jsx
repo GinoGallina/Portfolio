@@ -1,6 +1,6 @@
 import { SkillItem } from './SkillItem'
 
-export const AboutMeComponente = () => {
+export const AboutMeComponente = ({ reference }) => {
     const skills = [
         { nombre: 'Html', imageUrl: '../../public/html.svg' },
         { nombre: 'Css', imageUrl: '../../public/css.svg' },
@@ -13,7 +13,7 @@ export const AboutMeComponente = () => {
     ]
     return (
         <>
-            <div id="sobremi" className="row mt-3">
+            <div id="sobremi" ref={reference} className="row mt-3">
                 <p className="col-12 text-center display-1 fw-normal ">
                     Sobre Mi
                 </p>

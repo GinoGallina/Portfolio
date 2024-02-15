@@ -1,7 +1,21 @@
+import { useState } from 'react'
+import { InfoProject } from './Extra/InfoProject'
+
 /* eslint-disable react/prop-types */
 export const ProjectoItem = ({ projecto }) => {
+    const [showInfo, setShowInfo] = useState(false)
+    const hanldeClick = () => {
+        setShowInfo(!showInfo)
+    }
     return (
-        <div className="card-projecto col-12 mb-4 row shadow border rounded p-3 w-75">
+        <div className="card-projecto col-12 mb-4 row shadow border rounded p-3 w-75 position-relative">
+            {showInfo && (
+                <InfoProject
+                    handleClick={hanldeClick}
+                    projecto={projecto}
+                    showInfo={showInfo}
+                ></InfoProject>
+            )}
             <div
                 className="col-12 col-md-6"
                 style={{ height: '300px', objectFit: 'fill' }}
@@ -34,7 +48,12 @@ export const ProjectoItem = ({ projecto }) => {
                     >
                         Web
                     </a>
-                    <a className="btn btn-primary col  ">Info</a>
+                    <button
+                        className="btn btn-primary col"
+                        onClick={hanldeClick}
+                    >
+                        Info
+                    </button>
                 </div>
             </div>
         </div>

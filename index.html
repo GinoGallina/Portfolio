@@ -8,10 +8,52 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
+    <!-- CONTACT FORM -->
+    <!--===============================================================================================-->
+      <link rel="stylesheet" type="text/css" href="./FormContactUtils/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+      <link rel="stylesheet" type="text/css" href="./FormContactUtils/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+      <link rel="stylesheet" type="text/css" href="./FormContactUtils/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+      <link rel="stylesheet" type="text/css" href="./FormContactUtils/css/util.css">
+      <link rel="stylesheet" type="text/css" href="./FormContactUtils/css/main.css">
+            <!--===============================================================================================-->
+        <script src="./FormContactUtils/vendor/jquery/jquery-3.2.1.min.js"></script>
+      <!--===============================================================================================-->
+        <script src="./FormContactUtils/vendor/bootstrap/js/popper.js"></script>
+        <script src="./FormContactUtils/vendor/bootstrap/js/bootstrap.min.js"></script>
+      <!--===============================================================================================-->
+        <script src="./FormContactUtils/vendor/select2/select2.min.js"></script>
+      <!--===============================================================================================-->
+        <script src="./FormContactUtils/vendor/tilt/tilt.jquery.min.js"></script>
+    <!--===============================================================================================-->
+
     <title>Vite + React</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- CONTACT FORM -->
+
+        <script >
+          $('.js-tilt').tilt({
+            scale: 1.1
+          })
+        </script>
+
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+      </script>
+
+      <!--===============================================================================================-->
+      <script type="module" src="./FormContactUtils/js/main.js"></script>
   </body>
 </html>

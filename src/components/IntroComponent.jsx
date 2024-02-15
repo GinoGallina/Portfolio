@@ -1,6 +1,10 @@
-export const IntroComponent = () => {
+export const IntroComponent = ({ reference }) => {
     return (
-        <div id="intro" className="row justify-content-center p-5 intro">
+        <div
+            id="intro"
+            ref={reference}
+            className="row justify-content-center p-5 intro"
+        >
             <h1
                 className="col-12 col-lg-7 mb-4 text-center"
                 style={{ fontSize: '80px' }}

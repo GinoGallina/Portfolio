@@ -1,7 +1,9 @@
-export const Navbar = ({ hash }) => {
+export const Navbar = ({ hash, opacity }) => {
     return (
         <>
-            <nav className="navbar sticky-top navbar-expand-lg p-3 navbar-dark bg-dark fs-4">
+            <nav
+                className={`navbar sticky-top navbar-expand-lg p-3 navbar-dark bg-dark fs-4 ${opacity ? 'opacity' : ''}`}
+            >
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">
                         Gino Gallina
@@ -58,12 +60,14 @@ export const Navbar = ({ hash }) => {
                             </li>
                             <li className="nav-item">
                                 <a
-                                    className="nav-link disabled"
-                                    href="#"
-                                    tabIndex="-1"
-                                    aria-disabled="true"
+                                    className={
+                                        hash == '#contacto'
+                                            ? 'active nav-link'
+                                            : 'nav-link'
+                                    }
+                                    href="#contacto"
                                 >
-                                    Disabled
+                                    Contacto
                                 </a>
                             </li>
                         </ul>

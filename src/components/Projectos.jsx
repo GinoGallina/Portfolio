@@ -1,22 +1,24 @@
 import { ProjectoItem } from './ProjectoItem'
 
-export const Projectos = () => {
+export const Projectos = ({ reference }) => {
     const projectos = [
         {
             nombre: 'Veterinaria',
             link: 'https://veterinaria-pk.up.railway.app/login',
             github: 'https://github.com/GinoGallina/Veterinaria',
-            img: '../../public/hero-devices.svg'
+            img: '../../public/hero-devices.svg',
+            descripcion: 'Es una Veterninaria'
         },
         {
             nombre: 'Bad Dog',
             link: 'https://ginogallina.github.io/PaginaBadDog/',
             github: 'https://github.com/GinoGallina/PaginaBadDog',
-            img: '../../public/bad-dog.png'
+            img: '../../public/bad-dog.png',
+            descripcion: 'Es una landing page'
         }
     ]
     return (
-        <div id="projectos" className="mt-5">
+        <div id="projectos" ref={reference} className="mt-5">
             <p className="display-1 fw-normal text-center">Projectos</p>
             <div className="row  justify-content-center ">
                 {projectos.map((projecto) => {
