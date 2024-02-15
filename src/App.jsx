@@ -18,12 +18,14 @@ function App() {
     const inicioRef = useRef(null)
     const sobreMiRef = useRef(null)
     const projectosRef = useRef(null)
+    const contactoRef = useRef(null)
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
             const inicioDivTop = inicioRef.current.offsetTop
             const sobreMiDivTop = sobreMiRef.current.offsetTop
             const projectosDivTop = projectosRef.current.offsetTop
+            const contactoDivTop = contactoRef.current.offsetTop
 
             const scrollActual = window.scrollY + 68
 
@@ -40,8 +42,13 @@ function App() {
                 scrollActual < projectosDivTop
             ) {
                 setHash('#sobremi')
-            } else {
+            } else if (
+                scrollActual > sobreMiDivTop &&
+                scrollActual < contactoDivTop
+            ) {
                 setHash('#projectos')
+            } else {
+                setHash('#contacto')
             }
 
             //Opacity navbar
@@ -68,7 +75,7 @@ function App() {
                     <ImageDevices></ImageDevices>
                     <Projectos reference={projectosRef}></Projectos>
                 </div>
-                <ContactoComponent></ContactoComponent>
+                <ContactoComponent reference={contactoRef}></ContactoComponent>
                 <FooterComponent></FooterComponent>
             </main>
         </>
