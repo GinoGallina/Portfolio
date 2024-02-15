@@ -4,9 +4,6 @@ import '../assets/css/main.css'
 import '../assets/css/util.css'
 
 import { Tilt } from 'react-tilt'
-// import $ from 'jquery'
-// import 'select2'
-// import 'tilt.js'
 
 export const ContactoComponent = ({ reference }) => {
     const defaultOptions = {
@@ -55,40 +52,20 @@ export const ContactoComponent = ({ reference }) => {
 
     const inputRefs = useRef([])
     useEffect(() => {
-        const handleFocusListener = (input) => {
-            let nombreValido, emailValido, asuntoValido, mensajeValido
-            console.log(form)
-            nombreValido =
-                input.target.name == 'nombre' ? true : form.nombreValido
-            emailValido = input.target.name == 'email' ? true : form.emailValido
-            asuntoValido =
-                input.target.name == 'aunto' ? true : form.asuntoValido
-            mensajeValido =
-                input.target.name == 'mensaje' ? true : form.mensajeValido
-            setForm({
-                ...form,
-                nombreValido,
-                emailValido,
-                asuntoValido,
-                mensajeValido
-            })
-        }
-
         const inputs = inputRefs.current
-        console.log(inputs)
         inputs.map((input) => {
-            input.addEventListener('focus', (input) =>
-                handleFocusListener(input)
-            )
+            input.addEventListener('focus', () => {
+                input.parentNode.classList.remove('alert-validate')
+            })
         })
 
-        // return () => {
-        //     inputs.map((input) => {
-        //         input.removeEventListener('focus', (input) =>
-        //             handleFocusListener(input)
-        //         )
-        //     })
-        // }
+        return () => {
+            inputs.map((input) => {
+                input.removeEventListener('focus', () => {
+                    input.parentNode.classList.remove('alert-validate')
+                })
+            })
+        }
     }, [])
 
     return (
