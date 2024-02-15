@@ -27,13 +27,13 @@ export const ContactoComponent = ({ reference }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(form)
         // Validaciones
         const { nombre, email, asunto, mensaje } = form
-        const nombreValido = nombre && nombre.trim() !== ''
-        const emailValido = email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
-        const asuntoValido = asunto && asunto.trim() !== ''
-        const mensajeValido = mensaje && mensaje.trim() !== ''
+        const nombreValido = nombre && nombre.trim() !== '' ? true : false
+        const emailValido =
+            email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? true : false
+        const asuntoValido = asunto && asunto.trim() !== '' ? true : false
+        const mensajeValido = mensaje && mensaje.trim() !== '' ? true : false
         // Actualizar estado con los resultados de las validaciones
         setForm({
             ...form,
@@ -50,23 +50,32 @@ export const ContactoComponent = ({ reference }) => {
         setForm({ ...form, [e.target.name]: e.target.value })
     }
 
-    const inputRefs = useRef([])
-    useEffect(() => {
-        const inputs = inputRefs.current
-        inputs.map((input) => {
-            input.addEventListener('focus', () => {
-                input.parentNode.classList.remove('alert-validate')
-            })
-        })
+    // const handleChancheForm = (index) => {
+    //     console.log(index)
+    //     console.log(form)
+    // }
+    // const inputRefs = useRef([])
+    // useEffect(() => {
+    //     // const inputs = inputRefs.current
+    //     console.log(inputRefs)
+    //     inputRefs.current.map((input) => {
+    //         input.addEventListener('focus', () => {
+    //             input.parentNode.classList.remove('alert-validate')
+    //             let index = `${input.name}Valido`
 
-        return () => {
-            inputs.map((input) => {
-                input.removeEventListener('focus', () => {
-                    input.parentNode.classList.remove('alert-validate')
-                })
-            })
-        }
-    }, [])
+    //             //handleChancheForm(index)
+    //             //setForm({ ...form, [index]: !index })
+    //         })
+    //     })
+
+    //     // return () => {
+    //     //     inputs.map((input) => {
+    //     //         input.removeEventListener('focus', () => {
+    //     //             input.parentNode.classList.remove('alert-validate')
+    //     //         })
+    //     //     })
+    //     // }
+    // }, [])
 
     return (
         <>
@@ -106,7 +115,6 @@ export const ContactoComponent = ({ reference }) => {
                                     data-validate="El nombre es obligatorio"
                                 >
                                     <input
-                                        ref={(el) => inputRefs.current.push(el)}
                                         className="input1"
                                         type="text"
                                         name="nombre"
@@ -120,7 +128,6 @@ export const ContactoComponent = ({ reference }) => {
                                     data-validate="El email es obligatorio: ex@abc.xyz"
                                 >
                                     <input
-                                        ref={(el) => inputRefs.current.push(el)}
                                         className="input1"
                                         type="text"
                                         name="email"
@@ -134,7 +141,6 @@ export const ContactoComponent = ({ reference }) => {
                                     data-validate="El asunto es obligatorio"
                                 >
                                     <input
-                                        ref={(el) => inputRefs.current.push(el)}
                                         className="input1"
                                         type="text"
                                         name="asunto"
@@ -148,7 +154,6 @@ export const ContactoComponent = ({ reference }) => {
                                     data-validate="El mensaje es obligatorio"
                                 >
                                     <textarea
-                                        ref={(el) => inputRefs.current.push(el)}
                                         className="input1"
                                         name="mensaje"
                                         placeholder="Mensaje"
