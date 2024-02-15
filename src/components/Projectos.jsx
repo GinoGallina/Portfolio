@@ -19,7 +19,7 @@ export const Projectos = ({ reference }) => {
     ]
     return (
         <div id="projectos" ref={reference} className="mt-5">
-            <p className="display-1 fw-normal text-center">Projectos</p>
+            <p className="display-1 fw-normal text-center my-4">Projectos</p>
             <div className="row  justify-content-center ">
                 {projectos.map((projecto) => {
                     return (

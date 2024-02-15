@@ -1,3 +1,7 @@
+@import 'animate.css';
+
+
+
 * {
   margin: 0px;
   padding: 0px;
@@ -31,3 +35,15 @@
   transition: all 0.6s ease;
   opacity: 1;
 } 
+
+
+
+
+
+.bg-form-contact{
+    background: #009bff;
+  background: -webkit-linear-gradient(left, #0072ff, #00c6ff);
+  background: -o-linear-gradient(left, #0072ff, #00c6ff);
+  background: -moz-linear-gradient(left, #0072ff, #00c6ff);
+  background: linear-gradient(left, #0072ff, #00c6ff);
+}

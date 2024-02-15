@@ -8,6 +8,7 @@ import { Navbar } from './components/Navbar'
 import { Projectos } from './components/Projectos'
 import { useState } from 'react'
 import { ContactoComponent } from './components/ContactoComponent'
+import { FooterComponent } from './components/FooterComponent'
 
 function App() {
     const [hash, setHash] = useState('')
@@ -66,8 +67,9 @@ function App() {
                     ></AboutMeComponente>
                     <ImageDevices></ImageDevices>
                     <Projectos reference={projectosRef}></Projectos>
-                    <ContactoComponent></ContactoComponent>
                 </div>
+                <ContactoComponent></ContactoComponent>
+                <FooterComponent></FooterComponent>
             </main>
         </>
     )
