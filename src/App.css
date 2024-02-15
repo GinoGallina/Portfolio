@@ -1,0 +1,18 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.intro{
+  background-image: url('./../public/background-s.svg');
+}
+
+.skill-card:hover, .card-projecto:hover{
+  transform: scale(1.05); /* Aumenta el tamaño de la tarjeta al 105% cuando se hace hover */
+  transition: transform 0.3s ease; /* Agrega una transición suave de 0.3 segundos al efecto */
+}
+
+.nose{
+  background-color: #6E07F3;
+}
