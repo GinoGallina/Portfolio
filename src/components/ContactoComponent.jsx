@@ -54,28 +54,28 @@ export const ContactoComponent = ({ reference }) => {
     //     console.log(index)
     //     console.log(form)
     // }
-    // const inputRefs = useRef([])
-    // useEffect(() => {
-    //     // const inputs = inputRefs.current
-    //     console.log(inputRefs)
-    //     inputRefs.current.map((input) => {
-    //         input.addEventListener('focus', () => {
-    //             input.parentNode.classList.remove('alert-validate')
-    //             let index = `${input.name}Valido`
+    const inputRefs = useRef([])
+    useEffect(() => {
+        const inputs = inputRefs.current
+        // console.log(inputRefs)
+        inputRefs.current.map((input) => {
+            input.addEventListener('focus', () => {
+                input.parentNode.classList.remove('alert-validate')
 
-    //             //handleChancheForm(index)
-    //             //setForm({ ...form, [index]: !index })
-    //         })
-    //     })
+                // let index = `${input.name}Valido`
+                // handleChancheForm(index)
+                // setForm({ ...form, [index]: !index })
+            })
+        })
 
-    //     // return () => {
-    //     //     inputs.map((input) => {
-    //     //         input.removeEventListener('focus', () => {
-    //     //             input.parentNode.classList.remove('alert-validate')
-    //     //         })
-    //     //     })
-    //     // }
-    // }, [])
+        return () => {
+            inputs.map((input) => {
+                input.removeEventListener('focus', () => {
+                    input.parentNode.classList.remove('alert-validate')
+                })
+            })
+        }
+    }, [])
 
     return (
         <>
@@ -115,6 +115,7 @@ export const ContactoComponent = ({ reference }) => {
                                     data-validate="El nombre es obligatorio"
                                 >
                                     <input
+                                        ref={(el) => inputRefs.current.push(el)}
                                         className="input1"
                                         type="text"
                                         name="nombre"
@@ -128,10 +129,12 @@ export const ContactoComponent = ({ reference }) => {
                                     data-validate="El email es obligatorio: ex@abc.xyz"
                                 >
                                     <input
+                                        ref={(el) => inputRefs.current.push(el)}
                                         className="input1"
                                         type="text"
                                         name="email"
                                         placeholder="Email"
+                                        ref={(el) => inputRefs.current.push(el)}
                                     />
                                     <span className="shadow-input1"></span>
                                 </div>
@@ -141,6 +144,7 @@ export const ContactoComponent = ({ reference }) => {
                                     data-validate="El asunto es obligatorio"
                                 >
                                     <input
+                                        ref={(el) => inputRefs.current.push(el)}
                                         className="input1"
                                         type="text"
                                         name="asunto"
@@ -154,6 +158,7 @@ export const ContactoComponent = ({ reference }) => {
                                     data-validate="El mensaje es obligatorio"
                                 >
                                     <textarea
+                                        ref={(el) => inputRefs.current.push(el)}
                                         className="input1"
                                         name="mensaje"
                                         placeholder="Mensaje"

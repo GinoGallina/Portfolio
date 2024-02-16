@@ -368,8 +368,6 @@ textarea.input1 + .shadow-input1 {
     padding: 90px 15px 88px 15px;
   }
 }
-
-
 /*------------------------------------------------------------------
 [ Alert validate ]*/
 
@@ -410,12 +408,12 @@ textarea.input1 + .shadow-input1 {
 }
 
 .alert-validate::after {
-  content: "\f06a";
-  font-family: FontAwesome;
+  content: '\21'; /* Código del icono de advertencia en Font Awesome */
+  font-family: 'Font Awesome 5 Free';
   display: block;
   position: absolute;
   color: #c80000;
-  font-size: 15px;
+  font-size: 30px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -428,7 +426,8 @@ textarea.input1 + .shadow-input1 {
 .alert-validate:hover:before {
   visibility: visible;
   opacity: 1;
-}
+} 
+
 
 @media (max-width: 992px) {
   .alert-validate::before {
