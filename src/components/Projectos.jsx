@@ -6,14 +6,14 @@ export const Projectos = ({ reference }) => {
             nombre: 'Veterinaria',
             link: 'https://veterinaria-pk.up.railway.app/login',
             github: 'https://github.com/GinoGallina/Veterinaria',
-            img: '../../public/hero-devices.svg',
+            img: '/assets/images/bad-dog.png',
             descripcion: 'Es una Veterninaria'
         },
         {
             nombre: 'Bad Dog',
             link: 'https://ginogallina.github.io/PaginaBadDog/',
             github: 'https://github.com/GinoGallina/PaginaBadDog',
-            img: '../../public/bad-dog.png',
+            img: '/assets/images/bad-dog.png',
             descripcion: 'Es una landing page'
         }
     ]

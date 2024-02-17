@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useRef, useState } from 'react'
-import '../assets/css/main.css'
-import '../assets/css/util.css'
+import '/public/assets/css/main.css'
+import '/public/assets/css/util.css'
 
 import { Tilt } from 'react-tilt'
 

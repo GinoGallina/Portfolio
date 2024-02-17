@@ -19,7 +19,7 @@ export const IntroComponent = ({ reference }) => {
             <div className="row justify-content-center">
                 <img
                     className="col-12 col-md-6 col-lg-5 rounded-circle"
-                    src="../../public/Captura de pantalla 2022-11-05 190121.png"
+                    src="/assets/images/Captura de pantalla 2022-11-05 190121.png"
                     alt="fotoGinoGallina"
                 ></img>
             </div>
