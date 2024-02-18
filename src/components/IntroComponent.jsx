@@ -1,3 +1,5 @@
+import { base } from '../consts/consts'
+
 export const IntroComponent = ({ reference }) => {
     return (
         <div
@@ -19,7 +21,7 @@ export const IntroComponent = ({ reference }) => {
             <div className="row justify-content-center">
                 <img
                     className="col-12 col-md-6 col-lg-5 rounded-circle"
-                    src="/assets/images/Captura de pantalla 2022-11-05 190121.png"
+                    src={`${base}assets/images/Captura de pantalla 2022-11-05 190121.png`}
                     alt="fotoGinoGallina"
                 ></img>
             </div>

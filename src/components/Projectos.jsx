@@ -1,3 +1,4 @@
+import { base } from '../consts/consts'
 import { ProjectoItem } from './ProjectoItem'
 
 export const Projectos = ({ reference }) => {
@@ -6,14 +7,14 @@ export const Projectos = ({ reference }) => {
             nombre: 'Veterinaria',
             link: 'https://veterinaria-pk.up.railway.app/login',
             github: 'https://github.com/GinoGallina/Veterinaria',
-            img: '/assets/images/bad-dog.png',
+            img: `${base}assets/images/bad-dog.png`,
             descripcion: 'Es una Veterninaria'
         },
         {
             nombre: 'Bad Dog',
             link: 'https://ginogallina.github.io/PaginaBadDog/',
             github: 'https://github.com/GinoGallina/PaginaBadDog',
-            img: '/assets/images/bad-dog.png',
+            img: `${base}assets/images/bad-dog.png`,
             descripcion: 'Es una landing page'
         }
     ]

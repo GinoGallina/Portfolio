@@ -1,14 +1,15 @@
+import { base } from '../consts/consts'
 import { SkillItem } from './SkillItem'
 
 export const AboutMeComponente = ({ reference }) => {
     const skills = [
-        { nombre: 'Html', imageUrl: '/assets/images/html.svg' },
-        { nombre: 'Css', imageUrl: '/assets/images/css.svg' },
-        { nombre: 'JavaScript', imageUrl: '/assets/images/js.svg' },
-        { nombre: 'React', imageUrl: '/assets/images/react.svg' },
-        { nombre: 'NodeJs', imageUrl: '/assets/images/nodejs-icon.svg' },
-        { nombre: 'Git', imageUrl: '/assets/images/git.svg' },
-        { nombre: 'MySql', imageUrl: '/assets/images/mysql.svg' }
+        { nombre: 'Html', imageUrl: `${base}assets/images/html.svg` },
+        { nombre: 'Css', imageUrl: `${base}assets/images/css.svg` },
+        { nombre: 'JavaScript', imageUrl: `${base}assets/images/js.svg` },
+        { nombre: 'React', imageUrl: `${base}assets/images/react.svg` },
+        { nombre: 'NodeJs', imageUrl: `${base}assets/images/nodejs-icon.svg` },
+        { nombre: 'Git', imageUrl: `${base}assets/images/git.svg` },
+        { nombre: 'MySql', imageUrl: `${base}assets/images/mysql.svg` }
         // Agrega más lenguajes según sea necesario
     ]
     return (

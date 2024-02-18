@@ -4,6 +4,7 @@ import '/public/assets/css/main.css'
 import '/public/assets/css/util.css'
 
 import { Tilt } from 'react-tilt'
+import { base } from '../consts/consts'
 
 export const ContactoComponent = ({ reference }) => {
     const defaultOptions = {
@@ -94,7 +95,7 @@ export const ContactoComponent = ({ reference }) => {
                             <Tilt options={defaultOptions}>
                                 <div className="contact1-pic">
                                     <img
-                                        src="../../public/images/img-01.png"
+                                        src={`${base}assets/images/img-01.png`}
                                         alt="IMG"
                                     />
                                 </div>
