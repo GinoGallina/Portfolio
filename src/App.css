@@ -9,7 +9,7 @@
 }
 
 .intro{
-  background-image: url('./../public/background-s.svg');
+  background-image: url('/assets/images/background-s.svg');
 }
 
 .skill-card:hover, .card-projecto:hover{
@@ -41,7 +41,7 @@
 
 
 .bg-form-contact{
-    background: #009bff;
+  background: #009bff;
   background: -webkit-linear-gradient(left, #0072ff, #00c6ff);
   background: -o-linear-gradient(left, #0072ff, #00c6ff);
   background: -moz-linear-gradient(left, #0072ff, #00c6ff);
