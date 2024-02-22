@@ -8,14 +8,17 @@ export const ProjectoItem = ({ projecto }) => {
         setShowInfo(!showInfo)
     }
     return (
-        <div className="card-projecto col-12 mb-4 row shadow border rounded p-3 w-75 position-relative">
-            {showInfo && (
-                <InfoProject
-                    handleClick={hanldeClick}
-                    projecto={projecto}
-                    showInfo={showInfo}
-                ></InfoProject>
-            )}
+        <div
+            className="card-projecto col-12 mb-4 row shadow border bg-light rounded p-3 mx-auto position-relative"
+            style={{ width: '85%' }}
+        >
+            {/* {showInfo && (
+            )} */}
+            <InfoProject
+                handleClick={hanldeClick}
+                projecto={projecto}
+                showInfo={showInfo}
+            ></InfoProject>
             <div
                 className="col-12 col-md-6"
                 style={{ height: '300px', objectFit: 'fill' }}
@@ -43,15 +46,12 @@ export const ProjectoItem = ({ projecto }) => {
                     <a
                         href={projecto.link}
                         target="_blank"
-                        className="btn btn-success col mb-3  "
+                        className="btn btn-web text-white col mb-3  "
                         rel="noreferrer"
                     >
                         Web
                     </a>
-                    <button
-                        className="btn btn-primary col"
-                        onClick={hanldeClick}
-                    >
+                    <button className="btn btn-info col" onClick={hanldeClick}>
                         Info
                     </button>
                 </div>

@@ -2,7 +2,7 @@ export const Navbar = ({ hash, opacity }) => {
     return (
         <>
             <nav
-                className={`navbar sticky-top navbar-expand-lg p-3 navbar-dark bg-dark fs-4 ${opacity ? 'opacity' : ''}`}
+                className={`navbar sticky-top navbar-expand-lg p-2 navbar-dark bg-dark fs-5 ${opacity ? 'opacity' : ''}`}
             >
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">

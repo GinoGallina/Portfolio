@@ -1,27 +1,36 @@
-import { base } from '../consts/consts'
 import { ProjectoItem } from './ProjectoItem'
+import { projectos } from '../consts/consts.js'
+import { Carousel, CarouselItem } from 'react-bootstrap'
+import { useState } from 'react'
 
 export const Projectos = ({ reference }) => {
-    const projectos = [
-        {
-            nombre: 'Veterinaria',
-            link: 'https://veterinaria-pk.up.railway.app/login',
-            github: 'https://github.com/GinoGallina/Veterinaria',
-            img: `${base}assets/images/bad-dog.png`,
-            descripcion: 'Es una Veterninaria'
-        },
-        {
-            nombre: 'Bad Dog',
-            link: 'https://ginogallina.github.io/PaginaBadDog/',
-            github: 'https://github.com/GinoGallina/PaginaBadDog',
-            img: `${base}assets/images/bad-dog.png`,
-            descripcion: 'Es una landing page'
-        }
-    ]
+    const [index, setIndex] = useState(0)
+    const handleSelect = (index, e) => {
+        setIndex(index)
+    }
     return (
         <div id="projectos" ref={reference} className="mt-5">
-            <p className="display-1 fw-normal text-center my-4">Projectos</p>
-            <div className="row  justify-content-center ">
+            <p className="display-1 text-dark fw-normal text-center my-4">
+                Projectos
+            </p>
+            <div className="row my-5 ">
+                <Carousel
+                    interval={null}
+                    activeIndex={index}
+                    onSelect={handleSelect}
+                >
+                    {projectos.map((projecto, index) => {
+                        return (
+                            <CarouselItem key={index}>
+                                <ProjectoItem
+                                    projecto={projecto}
+                                ></ProjectoItem>
+                            </CarouselItem>
+                        )
+                    })}
+                </Carousel>
+            </div>
+            {/* <div className="row  justify-content-center ">
                 {projectos.map((projecto) => {
                     return (
                         <ProjectoItem
@@ -30,7 +39,7 @@ export const Projectos = ({ reference }) => {
                         ></ProjectoItem>
                     )
                 })}
-            </div>
+            </div> */}
         </div>
     )
 }

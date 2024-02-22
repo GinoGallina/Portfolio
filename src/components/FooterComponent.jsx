@@ -6,11 +6,11 @@ export const FooterComponent = () => {
                     href="#"
                     className="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"
                 >
-                    <span className=" text-white">Gino Gallina</span>
+                    <span className="ms-3 text-white">Gino Gallina</span>
                 </a>
-                <span className="mb-3 mb-md-0 text-white">
-                    © 2022 Company, Inc
-                </span>
+                {/* <span className="mb-3 mb-md-0 text-white">
+                    
+                </span> */}
             </div>
 
             <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">

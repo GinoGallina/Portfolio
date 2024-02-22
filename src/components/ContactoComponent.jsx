@@ -51,10 +51,6 @@ export const ContactoComponent = ({ reference }) => {
         setForm({ ...form, [e.target.name]: e.target.value })
     }
 
-    // const handleChancheForm = (index) => {
-    //     console.log(index)
-    //     console.log(form)
-    // }
     const inputRefs = useRef([])
     useEffect(() => {
         const inputs = inputRefs.current
@@ -62,10 +58,6 @@ export const ContactoComponent = ({ reference }) => {
         inputRefs.current.map((input) => {
             input.addEventListener('focus', () => {
                 input.parentNode.classList.remove('alert-validate')
-
-                // let index = `${input.name}Valido`
-                // handleChancheForm(index)
-                // setForm({ ...form, [index]: !index })
             })
         })
 
@@ -83,14 +75,17 @@ export const ContactoComponent = ({ reference }) => {
             <p
                 ref={reference}
                 id="contacto"
-                className="display-1 fw-normal text-center my-4"
+                className="display-1 fw-normal text-center my-4 text-dark"
             >
                 Contácto
             </p>
 
-            <div className="row bg-form-contact justify-content-center">
+            <div className="row w-100 m-0 bg-form-contact justify-content-center">
                 <div className="col-lg-10">
-                    <div className="contact1 py-5">
+                    <div
+                        className="contact1 py-5"
+                        style={{ background: 'none' }}
+                    >
                         <div className="container-contact1 ">
                             <Tilt options={defaultOptions}>
                                 <div className="contact1-pic">

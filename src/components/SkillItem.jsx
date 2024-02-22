@@ -8,7 +8,7 @@ export const SkillItem = ({ skill }) => {
                     alt={skill.nombre}
                 />
                 <div className="card-body">
-                    <p className="text-center card-title mb-0">
+                    <p className="text-center card-title mb-0 fw-bold">
                         {skill.nombre}
                     </p>
                 </div>

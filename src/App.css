@@ -12,20 +12,52 @@
   background-image: url('/assets/images/background-s.svg');
 }
 
-.skill-card:hover, .card-projecto:hover{
+
+/* Projecto Card */
+
+.card-projecto:hover{
   transform: scale(1.05); /* Aumenta el tamaño de la tarjeta al 105% cuando se hace hover */
-  transition: transform 0.3s ease; /* Agrega una transición suave de 0.3 segundos al efecto */
+  transition: all 0.3s ease; /* Agrega una transición suave de 0.3 segundos al efecto */
+  box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.15) !important; /* Sombra aumentada */
 }
+
+
+.card-projecto-info{
+  opacity: 0;
+  background-color: rgba(0, 0, 0);
+  visibility: hidden;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.card-projecto-info.show{
+  background-color: rgba(0, 0, 0);
+  opacity: 0.95;
+  visibility: visible; 
+}  
+
+
+/* Skill Card */
+.skill-card{
+  transition: all 0.3s ease; /* Agrega una transición suave de 0.3 segundos al efecto */
+
+}
+
+.skill-card:hover{
+  transform: scale(1.05); /* Aumenta el tamaño de la tarjeta al 105% cuando se hace hover */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; /* Sombra aumentada */
+}
+
+.skill-card:hover .card-body {
+  transform: translateY(5px); /* Elevación del contenido */
+}
+
+
 
 .nose{
   background-color: #6E07F3;
 }
 
-.card-projecto-info{
-  background-color: rgba(0, 0, 0);
-  opacity: 0.75;
-  transition: all 3s ease;
-}
 
 .navbar.opacity{
   transition: all 0.6s ease;
@@ -38,8 +70,6 @@
 
 
 
-
-
 .bg-form-contact{
   background: #009bff;
   background: -webkit-linear-gradient(left, #0072ff, #00c6ff);
@@ -47,3 +77,47 @@
   background: -moz-linear-gradient(left, #0072ff, #00c6ff);
   background: linear-gradient(left, #0072ff, #00c6ff);
 }
+
+/* colores botones */
+.btn-info{
+  background-color: #63b8cf;
+}
+
+.btn-web{
+  background-color: rgb(9, 106, 24) !important;
+}
+
+/* Carrousell */
+/* Estilos personalizados para las flechas */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Cambia el color de fondo de las flechas */
+  border-radius: 50%;
+}
+/* .carousel-control-prev-icon{
+  transform: translateX(-45px)  !important;
+}
+.carousel-control-next-icon{
+  transform: translateX(45px)  !important;
+
+} */
+
+/* Estilos personalizados para los indicadores */
+.carousel-indicators {
+  transform: translateY(45px)  !important;
+  background-color: rgba(0, 0, 0, 0.6) !important; /* Cambia el color de fondo del indicador activo */
+  border: solid black;
+  /* border-radius: 5%; */
+}
+main{
+  /* background-color: #ffffff; 
+  background-image: linear-gradient(135deg, #ffffff 50%, #87CEEB 50%); */
+
+
+  /* background-color: rgba(135, 207, 235, 0.3); */
+
+  background: linear-gradient(to bottom, rgba(135, 207, 235, 0),rgba(135, 207, 235, 0.5));
+
+}
+
+

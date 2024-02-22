@@ -14,19 +14,23 @@ export const AboutMeComponente = ({ reference }) => {
     ]
     return (
         <>
-            <div id="sobremi" ref={reference} className="row mt-3">
-                <p className="col-12 text-center display-1 fw-normal ">
+            <div
+                id="sobremi"
+                ref={reference}
+                className="row mt-3 justify-content-center"
+            >
+                <p className="col-12 text-center display-1 fw-normal text-dark">
                     Sobre Mi
                 </p>
                 <hr />
-                <p className="col-11">
+                <p className="col-11 text-start text-dark">
                     Estudiante de Ingeniería en Sistemas
                     <br></br>
-                    Actualmente me encuentro cursando 4to año de la carrera de
-                    Ingeniería en Sistemas de Información y formo parte del
-                    programa asicrónico Oracle Next Education + Alura LATAM
-                    donde estoy desarrollando mis habilidades para el desarrollo
-                    Frontend.
+                    Actualmente me encuentro cursando 5to año de la carrera de
+                    Ingeniería en Sistemas de Información y me esstoy formando
+                    para poder utilizar técnologias y conociemientos a la hora
+                    del desarrollo Full Stack, aunque mi rama preferida es el
+                    Backend
                     <br></br>
                     Soy una persona responsable, respetuosa y curiosa en busca
                     de alguna oportunidad laboral para poner en práctica mis
@@ -35,34 +39,39 @@ export const AboutMeComponente = ({ reference }) => {
             </div>
             <div className="row mt-3 justify-content-between px-4">
                 <div className="col-12 col-md-6">
-                    <p className="text-center display-5 mb-4 fw-normal fst-italic">
+                    <p className="text-center display-5 mb-4 fw-normal fst-italic text-dark">
                         <b>Información personal</b>
                     </p>
-                    <p className="fs-4 text-start">
-                        Im a <b>Frontend Web Developer</b> building the
-                        Front-end of Websites and Web Applications that leads to
-                        the success of the overall product. Check out some of my
-                        work in the <b>Projects</b> section.
+                    <p className="fs-4 text-start text-dark">
+                        Tengo 21 años y soy de Rosario, Argentina. Estoy
+                        estudiando para ser un desarrollador FullStack.Podes ver
+                        mis proyectos creados en la de seccion de{' '}
+                        <a
+                            className="text-dark text-decoration-none fs-4"
+                            href="#projectos"
+                        >
+                            <b>Proyectos</b>
+                        </a>
                     </p>
-                    <p className="fs-4">
+                    {/* <p className="fs-4">
                         I also like sharing content related to the stuff that I
                         have learned over the years in Web Development so it can
                         help other people of the Dev Community. Feel free to
                         Connect or Follow me on my Linkedin where I post useful
                         content related to Web Development and Programming.
-                    </p>
-                    <p className="fs-4">
-                        Im open to Job opportunities where I can contribute,
-                        learn and grow. If you have a good opportunity that
-                        matches my skills and experience then dont hesitate to
-                        contact me.
+                    </p> */}
+                    <p className="fs-4 text-dark">
+                        Estoy abierto a oportunidades laborales donde pueda
+                        contribuir, aprender y crecer. Si tienes una buena
+                        oportunidad que coincida con mis habilidades y
+                        experiencia, no dudes en contactarme.
                     </p>
                     {/* <a className="btn btn-sm btn-primary text-center" href="">
                         Contactame
                     </a> */}
                 </div>
                 <div className="col-12 col-md-6">
-                    <p className="text-center display-5 mb-4 fw-normal fst-italic">
+                    <p className="text-center display-5 mb-4 fw-normal fst-italic text-dark">
                         <b>Skills y Tecnologías</b>
                     </p>
                     <div className="row row-cols-2 row-cols-lg-3 justify-content-center p-3">
